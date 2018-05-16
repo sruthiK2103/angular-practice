@@ -6,13 +6,15 @@
       <h1>
         Welcome {{ name }} to my first Angular App!
       </h1>
-      <input type="text" [(ngModel)]="name" />
+      <!-- Assignment two -->
+      <input type="text" class="form-control" [(ngModel)]="userName">
 
-      <hr>
-      <app-servers></app-servers>
-      <!-- Assignment one  -->
+      <button class="btn btn-primary" [disabled]="!userName" 
+      (click)="emptyUserName()">EmptyUserName</button>
+
+      <!-- Assignment one  
       <div class="app-warning-alert"></div>
-      <div app-success-alert></div>
+      <div app-success-alert></div> -->
      
     </div>
   </div>
