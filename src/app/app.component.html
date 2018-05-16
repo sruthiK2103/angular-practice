@@ -11,7 +11,14 @@
 
       <button class="btn btn-primary" [disabled]="!userName" 
       (click)="emptyUserName()">EmptyUserName</button>
-
+      
+      <!-- Assignment three -->
+       <button class="btn btn-primary" (click) = "displayDetails()">Display Details</button>
+       <p *ngIf="display"> Displaying </p>
+      <ul> 
+      <li *ngFor = "let x of btnClicks; let i =index" [ngClass]="{ 'myClass' : i>=4}" 
+          [ngStyle]="{backgroundColor: i>=4 ?'blue':'transparent'}"> {{ x }} </li>
+      </ul>
       <!-- Assignment one  
       <div class="app-warning-alert"></div>
       <div app-success-alert></div> -->
